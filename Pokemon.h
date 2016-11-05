@@ -18,20 +18,6 @@ Pokemon(int index)
 ~Pokemon()
 {
 }
-
-string name;
-int level;
-int hp, hpMax;
-int attack,defense,specialAttack,specialDefense,speed;
-public:
-
-Pokemon(int index)
-{
-}
-
-~Pokemon()
-{
-}
 friend *Pokemon make_pokemon(element tempElement, string tempName);
 //Getter Functions
 string get_name();
@@ -40,7 +26,7 @@ int get_hpMax();
 int get_hp();
 };
 
-class Fire: public Pokemon
+class Fire: public Pokemon(int index)
 {
 	hp++;
 	attack+=2;
@@ -50,7 +36,7 @@ class Fire: public Pokemon
 	speed+=2;
 }
 
-class Water: public Pokemon
+class Water: public Pokemon(int index)
 {
 	hp+=2;
 	attack-=2;
@@ -59,7 +45,7 @@ class Water: public Pokemon
 	specialDefense+=4;
 	speed-=1;
 }
-class Grass: public Pokemon
+class Grass: public Pokemon(int index)
 {
 	hp-=3;
 	attack-=2;

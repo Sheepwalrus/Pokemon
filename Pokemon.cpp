@@ -23,7 +23,7 @@ int Pokemon::get_hp()
 	return hp;
 }
 
-Pokemon* Pokemon::make_pokemon(element tempElement, string tempName)
+Pokemon* make_pokemon(element tempElement, string tempName)
 {
 	
 	
@@ -31,24 +31,24 @@ Pokemon* Pokemon::make_pokemon(element tempElement, string tempName)
 	{
 		Fire* tempPokemon;
 		tempPokemon->name=tempName;
+		return tempPokemon;
 	}
 	if(tempElement == element::Water)
 	{
 		Water* tempPokemon;
 		tempPokemon->name=tempName;
+		return tempPokemon;
 	}
 	if(tempElement == element::Grass)
 	{
-		Fire* tempPokemon;
+		Grass* tempPokemon;
 		tempPokemon->name=tempName;
+		return tempPokemon;
 	}
-	
-	return tempPokemon;
 }
 
 int main()
 {
-	
 	return 0;
 }
 
